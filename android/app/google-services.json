@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "282662021746",
+    "project_id": "laravada-4c495",
+    "storage_bucket": "laravada-4c495.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282662021746:android:e91b628d69d90a5df830eb",
+        "android_client_info": {
+          "package_name": "com.gridsapps.cms_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282662021746-jioihnlkvae5s53kma0fldr7t7aq92lh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gridsapps.cms_app",
+            "certificate_hash": "112e489e2fd058f27c7449d52fa2ac44163f6091"
+          }
+        },
+        {
+          "client_id": "282662021746-i4bj9b9b8qc69bqk9vaata6nuvmmbacj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANifNU1CEq4rL55vot7_CDAt_jlHAQPCM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282662021746-i4bj9b9b8qc69bqk9vaata6nuvmmbacj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

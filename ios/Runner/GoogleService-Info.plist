@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>282662021746-379fq96ne13nd8nhnb8k84l0bg7u33hl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.282662021746-379fq96ne13nd8nhnb8k84l0bg7u33hl</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>282662021746-jioihnlkvae5s53kma0fldr7t7aq92lh.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBR837RdzQyZwf0nS5cRGnjX3oTtSyFPXM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>282662021746</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gridsapps.cmsApp</string>
+	<key>PROJECT_ID</key>
+	<string>laravada-4c495</string>
+	<key>STORAGE_BUCKET</key>
+	<string>laravada-4c495.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:282662021746:ios:c503e4a601ef9e2bf830eb</string>
+</dict>
+</plist>

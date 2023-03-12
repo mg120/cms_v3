@@ -5,6 +5,7 @@ import 'package:cms_app/widgets/appCachedImage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../helper/GlobalNotification.dart';
 import '../partners/partners_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -23,6 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Get.off(() => const PartnersScreen(), binding: GetBinding());
     });
     super.initState();
+    GlobalNotification.instance.setupNotification(context);
   }
   @override
   Widget build(BuildContext context) {
