@@ -1,5 +1,6 @@
 import 'package:cms_app/widgets/app_bar_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'components/notification_item.dart';
 
@@ -9,8 +10,8 @@ class NotificationsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(
-        title: "Notifications",
+      appBar: AppBarWidget(
+        title: "notifications".tr,
         centerTitle: true,
       ),
       body: ListView.builder(

@@ -1,3 +1,4 @@
+import 'package:cms_app/helper/icon_broken.dart';
 import 'package:cms_app/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,19 +22,13 @@ class BuildHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         BuildNotificationIcon() ,
       ],
       title: AppCachedImage(imageUrl: Get.find<SettingsService>().appIconSettings?.plainValue??"",
-        radius: 0, fit: BoxFit.contain,),
-      // AppText(
-      //   Get.find<SettingsService>().titleSettings?.plainValue??"CMS",
-      //   fontSize: 18,
-      //   fontWeight: FontWeight.bold,
-      //   color: AppTheme.primaryColor,
-      // ),
+        radius: 0, fit: BoxFit.contain, width: 136,height: 50,),
       leading: InkWell(
         onTap: () => Scaffold.of(context).openDrawer(),
         child: Icon(
-          Icons.menu,
+          IconBroken.category,
           size: 30,
-          color: AppTheme.primaryColor,
+          color: AppTheme.secondaryColor,
         ),
       ),
       // actions: actions,

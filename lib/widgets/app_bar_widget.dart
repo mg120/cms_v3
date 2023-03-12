@@ -6,16 +6,17 @@ import 'package:get/get.dart';
 import 'app_text.dart';
 
 class AppBarWidget extends StatelessWidget with PreferredSizeWidget{
-   const AppBarWidget({Key? key, required this.title, this.centerTitle = false}) : super(key: key);
+   const AppBarWidget({Key? key, required this.title, this.centerTitle = false, this.isBackActive = true}) : super(key: key);
    final String? title;
    final bool? centerTitle;
+   final bool isBackActive;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: InkWell(
+      leading: isBackActive?InkWell(
           onTap: ()=> Get.back(),
-          child: const Icon(IconBroken.arrowLeftCircle, color: Colors.white, size: 30,)),
+          child: const Icon(IconBroken.arrowLeftCircle, color: Colors.white, size: 30,)):const SizedBox.shrink(),
       title: AppText(title!, fontSize: 22, color: Colors.white, fontWeight: FontWeight.w800, centerText: true,),
       centerTitle: centerTitle,
       flexibleSpace: Container(

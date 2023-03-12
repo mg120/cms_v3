@@ -13,6 +13,7 @@ class SettingsService extends GetxService {
   SettingsItem? titleSettings;
   SettingsItem? primaryColorSettings;
   SettingsItem? secondaryColorSettings;
+  SettingsItem? hoverColorSettings;
   SettingsItem? navColorSettings;
   SettingsItem? emailSettings;
   SettingsItem? appIconSettings;
@@ -120,7 +121,9 @@ class SettingsService extends GetxService {
           primaryColorSettings = item;
         } else if(item.key == "secondary_color"){
           secondaryColorSettings = item;
-        }
+        } else if(item.key == "hover_color"){
+          hoverColorSettings = item;
+    }
       }
     } else{
       Get.showSnackbar(Ui.errorSnackBar(message: response.data['message'],));

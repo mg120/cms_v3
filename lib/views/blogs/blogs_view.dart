@@ -18,8 +18,8 @@ class BlogsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(
-        title: "Blogs",
+      appBar: AppBarWidget(
+        title: "blogs".tr,
         centerTitle: true,
       ),
       body: GetBuilder<BlogsController>(
@@ -44,8 +44,8 @@ class BlogsView extends StatelessWidget {
                       );
                     },
                   )
-                : const EmptyWidget(
-                    iconPath: "iconPath", displayTxt: "No blogs founded"),
+                : EmptyWidget(
+                    iconPath: "iconPath", displayTxt: "no_blogs_founded".tr),
       ),
     );
   }

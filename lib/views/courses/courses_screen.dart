@@ -8,14 +8,16 @@ import '../../widgets/loading_widget.dart';
 import 'widgets/build_course_widget.dart';
 
 class CoursesScreen extends StatelessWidget {
-  const CoursesScreen({Key? key}) : super(key: key);
+  const CoursesScreen({Key? key, this.isHomeScreen=false}) : super(key: key);
+  final bool isHomeScreen;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(
-        title:"Courses",
-        centerTitle: false,
+      appBar: AppBarWidget(
+        title:"courses".tr,
+        centerTitle: isHomeScreen,
+        isBackActive: !isHomeScreen,
       ),
       body: GetBuilder<CoursesController>(
         init: CoursesController(),
@@ -38,8 +40,8 @@ class CoursesScreen extends StatelessWidget {
               height: 10,
             );
           },
-        ) : const EmptyWidget(
-            iconPath: "iconPath", displayTxt: "No blogs founded"),
+        ) : EmptyWidget(
+            iconPath: "iconPath", displayTxt: "no_courses_founded".tr),
       ),
     );
   }

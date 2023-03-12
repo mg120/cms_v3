@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 import '../data/api_response/all_pages_response.dart';
 import '../data/models/page_model.dart';
+import '../data/models/rive_asset_model.dart';
 import '../helper/constants.dart';
 import '../services/network/api_service.dart';
 

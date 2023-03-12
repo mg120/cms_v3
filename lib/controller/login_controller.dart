@@ -13,7 +13,6 @@ class LoginController extends GetxController{
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  bool visiblePassword = true;
 
   Future<void> login() async {
     if(passwordController.text.trim().length < 6){
@@ -21,11 +20,9 @@ class LoginController extends GetxController{
       return;
     }
     BotToast.showLoading();
-    // String? _token = await FirebaseMessaging.instance.getToken();
     Map<String, dynamic> body = {
       "email": emailController.text.trim(),
       "password": passwordController.text.trim(),
-      "device_type": Platform.isAndroid? "android":"ios",
     };
     log("Body==> ${body.toString()}");
     final response = await ApiService.post(loginPath, body: body);

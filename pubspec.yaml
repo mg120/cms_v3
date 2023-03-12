@@ -59,6 +59,13 @@ dependencies:
   pandabar: ^0.1.2
   shimmer: ^2.0.0
   rive: ^0.10.2
+  dotted_border: ^2.0.0+3
+  file_picker: ^5.2.5
+  video_player: ^2.5.1
+  # FIREBASE
+  firebase_core:
+  firebase_messaging:
+  flutter_local_notifications:
 
 
 dev_dependencies:
@@ -87,6 +94,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/RiveAssets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

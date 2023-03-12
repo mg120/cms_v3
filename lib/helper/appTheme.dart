@@ -9,6 +9,7 @@ class AppTheme {
 
   static final Color primaryColor = Get.find<SettingsService>().primaryColorSettings?.plainValue?.toColor();
   static final Color secondaryColor = Get.find<SettingsService>().secondaryColorSettings?.plainValue?.toColor();
+  static final Color hoverColor = Get.find<SettingsService>().hoverColorSettings?.plainValue?.toColor();
   static const Color greenColor = Color.fromRGBO(62, 196, 149, 1);
   static const Color redColor = Color.fromRGBO(212, 0, 0, 1);
   static const Color lightBlackColor = Color.fromRGBO(64, 64, 63, 1);

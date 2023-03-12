@@ -8,14 +8,16 @@ import '../../widgets/loading_widget.dart';
 import 'widgets/build_event_widget.dart';
 
 class EventsScreen extends StatelessWidget {
-  const EventsScreen({Key? key}) : super(key: key);
+  const EventsScreen({Key? key, this.isHomeScreen = false}) : super(key: key);
+  final bool isHomeScreen;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(
+      appBar: AppBarWidget(
         title: "Events",
         centerTitle: true,
+        isBackActive: !isHomeScreen,
       ),
       body: GetBuilder<EventsController>(
         init: EventsController(),
@@ -23,6 +25,7 @@ class EventsScreen extends StatelessWidget {
             ? const LoadingWidget()
             : controller.events.isNotEmpty
             ? ListView.separated(
+          padding: const EdgeInsets.only(top: 16.0, bottom: 28),
           scrollDirection: Axis.vertical,
           itemCount: controller.events.length,
           physics: const BouncingScrollPhysics(),

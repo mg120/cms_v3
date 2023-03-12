@@ -1,13 +1,13 @@
 import '../models/section_item_model.dart';
 
-class SectionResponse {
+class SectionsResponse {
   bool? success;
   List<SectionItem>? data;
   String? message;
 
-  SectionResponse({this.success, this.data, this.message});
+  SectionsResponse({this.success, this.data, this.message});
 
-  SectionResponse.fromJson(Map<String, dynamic> json) {
+  SectionsResponse.fromJson(Map<String, dynamic> json) {
     success = json['success'];
     if (json['data'] != null) {
       data = <SectionItem>[];

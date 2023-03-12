@@ -6,7 +6,11 @@ import '../helper/ui.dart';
 import '../services/network/api_service.dart';
 
 class NotificationsController extends GetxController{
+  bool _isLoading = true;
+  bool get isLoading => _isLoading;
 
+  // List<NotificationModel> notificationsList = [];
+  
   @override
   void onInit() {
     // TODO: implement onInit

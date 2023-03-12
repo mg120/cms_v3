@@ -13,7 +13,6 @@ class RegisterController extends GetxController{
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   bool visiblePassword = true;
@@ -26,9 +25,9 @@ class RegisterController extends GetxController{
     BotToast.showLoading();
     // String? _token = await FirebaseMessaging.instance.getToken();
     Map<String, dynamic> body = {
-      "phone": phoneController.text.trim(),
+      "name": nameController.text.trim(),
+      "email": emailController.text.trim(),
       "password": passwordController.text.trim(),
-      "device_type": Platform.isAndroid? "android":"ios",
     };
     log("Body==> ${body.toString()}");
     final response = await ApiService.post(loginPath, body: body);

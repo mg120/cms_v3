@@ -24,8 +24,8 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
         children: [
           AppTextFormField(
-            labelText: "Name",
-            hintText: "Enter your name",
+            labelText: "name".tr,
+            hintText: "enter_your_name".tr,
             showLabel: true,
             controller: nameController,
             keyboardType: TextInputType.name,
@@ -34,8 +34,8 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
           const SizedBox(height: 16),
           AppTextFormField(
             showLabel: true,
-            labelText: "Email",
-            hintText: "Enter your email",
+            labelText: "email".tr,
+            hintText: "enter_your_email".tr,
             controller: emailController,
             keyboardType: TextInputType.emailAddress,
             validateEmptyText: 'email_required'.tr,
@@ -43,27 +43,19 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
           const SizedBox(height: 16),
           AppTextFormField(
             showLabel: true,
-            labelText: "Message",
-            hintText: "Enter your message",
+            labelText: "message".tr,
+            hintText: "write_message_here".tr,
             controller: messageController,
             keyboardType: TextInputType.text,
-            validateEmptyText: 'description_required'.tr,
+            validateEmptyText: 'message_required'.tr,
             maxLines: 4,
-          ),
-          const SizedBox(height: 16),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-
-            ],
           ),
           const SizedBox(height: 28),
           SizedBox(
             width: size.width,
             height: 48,
             child: AppElevatedButton(
-              text: "Apply",
+              text: "apply".tr,
               onPressed: (){},),
           ),
         ],

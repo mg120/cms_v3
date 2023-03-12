@@ -17,7 +17,6 @@ class RatingBarWidget extends StatelessWidget {
   final double itemSize;
   final Color starColor;
   final double itemPadding;
-  // final Function(double rating) onRatingChanged;
 
   @override
   Widget build(BuildContext context) {

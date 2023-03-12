@@ -16,14 +16,14 @@ class PartnersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const AppText("Partners", fontSize: 20, fontWeight: FontWeight.bold),
+        title: AppText("partners".tr, fontSize: 20, fontWeight: FontWeight.bold),
         actions: [
           InkWell(
               onTap: ()=> Get.off(() => const HomeScreen(), binding: GetBinding()),
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.center,
-                  child: AppText('Skip', color: AppTheme.primaryColor, fontSize: 16,))),
+                  child: AppText('skip'.tr, color: AppTheme.primaryColor, fontSize: 16,))),
         ],
       ),
       body: GetBuilder<PartnerController>(
@@ -33,7 +33,7 @@ class PartnersScreen extends StatelessWidget {
             : controller.partners.isNotEmpty
                 ? GridView.builder(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0, vertical: 28.0),
+                        horizontal: 16.0, vertical: 16.0),
                     scrollDirection: Axis.vertical,
                     itemCount: controller.partners.length,
                     physics: const BouncingScrollPhysics(),
@@ -52,7 +52,7 @@ class PartnersScreen extends StatelessWidget {
                   )
                 : const EmptyWidget(
                     iconPath: 'assets/icons.category.svg',
-                    displayTxt: "No Partners founded"),
+                    displayTxt: "No partners founded"),
       ),
     );
   }

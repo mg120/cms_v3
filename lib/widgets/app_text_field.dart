@@ -148,9 +148,9 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
                 : null,
             enabled: widget.enabled,
             errorStyle: const TextStyle(color: Colors.red, fontSize: 12),
-            errorBorder: const UnderlineInputBorder(borderSide: BorderSide(
-              color: Colors.red,
-            ),),
+            // errorBorder: const UnderlineInputBorder(borderSide: BorderSide(
+            //   color: Colors.red,
+            // ),),
           ),
       );
   }

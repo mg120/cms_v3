@@ -6,6 +6,7 @@ import 'package:pandabar/pandabar.dart';
 
 import '../../../controller/main_screen_controller.dart';
 import '../../../helper/appTheme.dart';
+import '../../../helper/icon_broken.dart';
 
 
 class BottomNav extends StatelessWidget {
@@ -15,10 +16,11 @@ class BottomNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<MainController>(
       builder:(controller)=> PandaBar(
-        buttonSelectedColor: Colors.white,
+        buttonSelectedColor: AppTheme.secondaryColor,
         backgroundColor: AppTheme.primaryColor,
-        // fabColors: [Color(0xFFECDCFF), Color(0xFFECDCFF)],
-        fabIcon: Icon(MaterialCommunityIcons.grill_outline, color: AppTheme.secondaryColor, size: 24,),
+        buttonColor: Colors.white,
+        fabColors: [AppTheme.secondaryColor, AppTheme.secondaryColor],
+        fabIcon: const Icon(MaterialCommunityIcons.grill_outline, color: Colors.white, size: 24,),
         buttonData: [
           PandaBarButtonData(
               id: 0,
@@ -32,8 +34,8 @@ class BottomNav extends StatelessWidget {
           ),
           PandaBarButtonData(
               id: 2,
-              icon: Icons.chat,
-              title: "Chats".tr,
+              icon: IconBroken.editSquare,
+              title: "Courses".tr,
           ),
           PandaBarButtonData(
               id: 3,
@@ -42,7 +44,8 @@ class BottomNav extends StatelessWidget {
           ),
         ],
         onChange: (id) {
-          // controller.changePage(id);
+          log("Id==> $id}");
+          controller.updateNavIndex(id);
         },
         onFabButtonPressed: () {
           log("fab clicked..");

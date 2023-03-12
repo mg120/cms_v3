@@ -1,5 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../services/settings_services.dart';
 
 class AppCachedImage extends StatelessWidget {
   final String imageUrl;
@@ -89,8 +92,8 @@ class AppCachedImage extends StatelessWidget {
                     bottomRight: Radius.circular(radius ?? 12),
                   ),
             image: DecorationImage(
-              image: const AssetImage('assets/images/logo.png'),
-              fit: fit ?? BoxFit.contain,
+              image: NetworkImage(Get.find<SettingsService>().appIconSettings?.plainValue??"",),
+              fit: BoxFit.contain,
             ),
           ),
         ),
