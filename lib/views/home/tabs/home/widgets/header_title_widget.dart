@@ -1,3 +1,4 @@
+import 'package:cms_app/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,23 +11,40 @@ class HeaderTitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 4),
-      padding: EdgeInsets.symmetric(horizontal: 6.0, vertical: 0),
+      // margin: const EdgeInsets.symmetric(vertical: 4),
+      height: 50,
+      padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 0),
       decoration: BoxDecoration(
         color: AppTheme.primaryColor,
       ),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Expanded(child: Text(title??"", style: Get.textTheme.headline5!.copyWith(color: Colors.white))),
+          Expanded(child: Stack(
+            alignment: Alignment.topLeft,
+            children: [
+              Align(
+                alignment: Alignment.topLeft,
+                child: SizedBox(
+                    height: 28,
+                    child: AppText(title, color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
+              ),
+              const Positioned(
+                bottom: 12,
+                child: SizedBox(height: 15,
+                    child: Text("-------------", style: TextStyle(color: Colors.white),)),
+              )
+            ],
+          )),
           MaterialButton(
             onPressed: () {
               // Get.toNamed(Routes.CATEGORIES);
             },
-            height: 28,
-            shape: StadiumBorder(),
-            color: Color(0xFFe9d7fd).withOpacity(0.8),
-            child: Text("View All".tr, style: Get.textTheme.subtitle1),
+            height: 34,
+            shape: const StadiumBorder(),
+            color: AppTheme.secondaryColor,
             elevation: 0,
+            child: Text("View All".tr, style: Get.textTheme.subtitle1?.copyWith(color: Colors.white)),
           ),
         ],
       ),

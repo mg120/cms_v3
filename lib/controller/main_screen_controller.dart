@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:cms_app/views/auth/login/login_screen.dart';
 import 'package:cms_app/views/faqs/faqs_screen.dart';
 import 'package:cms_app/views/home/tabs/categories/categories_view.dart';
 import 'package:cms_app/views/home/tabs/home/home_view.dart';
@@ -28,14 +29,10 @@ class MainController extends GetxController{
   }
 
   final List<Widget> _userHomeChildren = [
-    const HomeView(),
-    const CoursesScreen(),
-    // const CategoriesScreen(),
-    const EventsScreen(),
-    const ProductsScreen(),
-    // const FaqsScreen(),
-    // const BlogsView(),
-    // ProfileView(),
+    HomeView(),
+    const EventsScreen(isHomeScreen: true,),
+    const CoursesScreen(isHomeScreen: true,),
+    const LoginScreen(),
   ];
   List<Widget> get children => _userHomeChildren;
 }
