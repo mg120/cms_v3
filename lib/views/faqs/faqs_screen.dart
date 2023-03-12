@@ -28,18 +28,17 @@ class FaqsScreen extends StatelessWidget {
                 controller.faqsList[index].isExpanded= !isExpanded;
                 controller.update();
             },
-            animationDuration: Duration(milliseconds: 500),
+            animationDuration: const Duration(milliseconds: 500),
             children: controller.faqsList.map(
                   (item) => ExpansionPanel(
                 canTapOnHeader: true,
                 backgroundColor:
-                item.isExpanded == true ? AppTheme.secondaryColor.withOpacity(0.3) : Colors.white,
+                item.isExpanded == true ? AppTheme.hoverColor.withOpacity(0.2) : Colors.white,
                 headerBuilder: (_, isExpanded) => Container(
-                    padding:
-                    EdgeInsets.symmetric(vertical: 15, horizontal: 16),
+                    padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 16),
                     child: Text(
                       item.question??"",
-                      style: TextStyle(fontSize: 16),
+                      style: const TextStyle(fontSize: 16),
                     )),
                 body: Container(
                   padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 16),

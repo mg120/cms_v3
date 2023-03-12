@@ -3,6 +3,8 @@ import 'package:cms_app/views/home/componenets/bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'tabs/home/home_view.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -11,11 +13,16 @@ class HomeScreen extends StatelessWidget {
     return WillPopScope(
       onWillPop:()=> _onWillPop(context),
       child: Scaffold(
-        body: GetBuilder<MainController>(
-            init: MainController(),
-            builder: (controller)=>controller.children[controller.selectedNavIndex]
+        // body: HomeView(),
+        extendBody: true,
+        body: Padding(
+          padding: const EdgeInsets.only(bottom: 68.0),
+          child: GetBuilder<MainController>(
+              init: MainController(),
+              builder: (controller)=>controller.children[controller.selectedNavIndex]
+          ),
         ),
-        // bottomNavigationBar:const BottomNav(),
+        bottomNavigationBar: BottomNav(),
       ),
     );
   }

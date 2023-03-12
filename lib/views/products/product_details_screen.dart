@@ -54,50 +54,48 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Container(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(6),
               decoration: BoxDecoration(color: Colors.grey.withOpacity(0.3)),
               child: Column(
                 children: [
                   AppCachedImage(
                     imageUrl: widget.productModel.images![index],
-                    height: 210,
+                    height: 248,
                     width: MediaQuery.of(context).size.width,
                     fit: BoxFit.cover,
                   ),
-                  const SizedBox(height: 16),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisSize: MainAxisSize.max,
-                      children:  widget.productModel.images!.map((e) {
+                      children:  widget.productModel.images!.map((item) {
                         return InkWell(
                           splashColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           radius: 8,
                           onTap: () {
                             setState(() {
-                              index = widget.productModel.images!.indexOf(e);
+                              index = widget.productModel.images!.indexOf(item);
                             });
                           },
                           child: Container(
-                            margin: EdgeInsets.only(right: 8),
-                            padding: EdgeInsets.all(5),
+                            margin: const EdgeInsets.only(right: 8),
+                            padding: const EdgeInsets.all(4),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                color: index == widget.productModel.images!.indexOf(e) ? Colors.red : Colors.transparent,
+                                color: index == widget.productModel.images!.indexOf(item) ? AppTheme.primaryColor : Colors.transparent,
                               ),
                             ),
-                            child: AppCachedImage(imageUrl: e, height: 48, width: 48, fit: BoxFit.cover,),
+                            child: AppCachedImage(imageUrl: item, height: 48, width: 48, fit: BoxFit.contain,),
                           ),
                         );
                       }).toList(),
                     ),
                   ),
-                  const SizedBox(height: 16),
                 ],
               ),
             ),
