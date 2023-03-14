@@ -6,6 +6,7 @@ import 'package:cms_app/views/faqs/faqs_screen.dart';
 import 'package:cms_app/views/sections/about/about_section_screen.dart';
 import 'package:cms_app/views/sections/experience/experience_section.dart';
 import 'package:cms_app/views/sections/solutions/solutions_section_screen.dart';
+import 'package:cms_app/views/testimonials/testimoials_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -127,6 +128,15 @@ class _MainDrawerState extends State<MainDrawer> {
               ),
               SlideMenuItem(
                 index: 6,
+                icon: IconBroken.ticket,
+                title: "testimonials".tr,
+                isActive: false,
+                press: () {
+                  Get.to(() => const AllTestimonialsScreen());
+                },
+              ),
+              SlideMenuItem(
+                index: 7,
                 icon: IconBroken.infoCircle,
                 title: "faqs".tr,
                 isActive: false,

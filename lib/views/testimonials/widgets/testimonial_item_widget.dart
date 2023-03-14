@@ -1,24 +1,20 @@
-import 'package:cms_app/data/models/donation_model.dart';
-import 'package:cms_app/views/donations/donations_details_screen.dart';
+import 'package:cms_app/data/models/testimonial_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../data/models/course_model.dart';
 import '../../../helper/appTheme.dart';
 import '../../../widgets/appCachedImage.dart';
 import '../../../widgets/app_text.dart';
+import '../testimonial_detials_screen.dart';
 
-class BuildDonationWidget extends StatelessWidget {
-  const BuildDonationWidget(
-      {Key? key, required this.index, required this.donationModel})
-      : super(key: key);
-  final int index;
-  final DonationModel donationModel;
+class TestimonialItemWidget extends StatelessWidget {
+  const TestimonialItemWidget({Key? key, required this.testimonialModel}) : super(key: key);
+  final TestimonialModel testimonialModel;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap:()=> Get.to(()=> DonationDetailsScreen(donationModel: donationModel)),
+      onTap:()=> Get.to(()=> TestimonialDetailsScreen(testimonialModel: testimonialModel)),
       child: Container(
         padding: const EdgeInsets.all(4.0),
         decoration: const BoxDecoration(
@@ -34,33 +30,19 @@ class BuildDonationWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            AppCachedImage(imageUrl: donationModel.image ?? "",
+            AppCachedImage(imageUrl: testimonialModel.image ?? "",
                 width: double.infinity,
                 height: 168,
-                radius: 8.0),
+                radius: 8.0, fit: BoxFit.fitHeight,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   AppText(
-                    donationModel.title ?? "", maxLines: 2,
+                    testimonialModel.title ?? "", maxLines: 2,
                     fontSize: 15.0,
                     fontWeight: FontWeight.w600,
-                  ),
-                  const SizedBox(
-                    height: 6.0,
-                  ),
-                  AppText(
-                    "content".tr, maxLines: 1,
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.w500,
-                    underLine: true,
-                  ),
-                  Text(donationModel.content?? "", maxLines: 4, style: const TextStyle(
-                    fontSize: 14,
-                    height: 1.4,
-                    color: Colors.black54),
                   ),
                   const Padding(
                     padding: EdgeInsets.symmetric(vertical: 4.0),
@@ -73,34 +55,15 @@ class BuildDonationWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           AppText(
-                            "goal_amount".tr,
+                            "job".tr,
                             maxLines: 1,
                             fontSize: 13,
                           ),
                           const SizedBox(
-                            width: 3.0,
+                            width: 6.0,
                           ),
                           AppText(
-                            "${donationModel.goalAmount}\$",
-                            maxLines: 1,
-                            color: AppTheme.primaryColor,
-                            fontSize: 14,
-                          ),
-                        ],
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          AppText(
-                            "minimum_amount".tr,
-                            maxLines: 1,
-                            fontSize: 13,
-                          ),
-                          const SizedBox(
-                            width: 3.0,
-                          ),
-                          AppText(
-                            "${donationModel.minimumAmount}\$",
+                            testimonialModel.job??"",
                             maxLines: 1,
                             color: AppTheme.primaryColor,
                             fontSize: 14,
@@ -111,23 +74,36 @@ class BuildDonationWidget extends StatelessWidget {
                       //   crossAxisAlignment: CrossAxisAlignment.center,
                       //   children: [
                       //     AppText(
-                      //       "CustomAmount:",
+                      //       "minimum_amount".tr,
                       //       maxLines: 1,
-                      //       color: AppTheme.primaryColor,
-                      //       fontSize: 16,
+                      //       fontSize: 13,
                       //     ),
                       //     const SizedBox(
                       //       width: 3.0,
                       //     ),
                       //     AppText(
-                      //       "${donationModel.customAmount}\$",
+                      //       "${donationModel.minimumAmount}\$",
                       //       maxLines: 1,
-                      //       color: Colors.black,
-                      //       fontSize: 16,
+                      //       color: AppTheme.primaryColor,
+                      //       fontSize: 14,
                       //     ),
                       //   ],
                       // ),
                     ],
+                  ),
+                  const SizedBox(
+                    height: 6.0,
+                  ),
+                  AppText(
+                    "content".tr, maxLines: 1,
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.w500,
+                    underLine: true,
+                  ),
+                  Text(testimonialModel.description?? "", maxLines: 4, style: const TextStyle(
+                      fontSize: 14,
+                      height: 1.4,
+                      color: Colors.black54),
                   ),
                 ],
               ),

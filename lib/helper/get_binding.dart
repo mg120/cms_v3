@@ -1,4 +1,5 @@
 import 'package:cms_app/controller/about_controller.dart';
+import 'package:cms_app/controller/all_testimonials_controller.dart';
 import 'package:cms_app/controller/blogs_controller.dart';
 import 'package:cms_app/controller/categories_controller.dart';
 import 'package:cms_app/controller/courses_controller.dart';
@@ -12,6 +13,7 @@ import 'package:cms_app/controller/profile_controller.dart';
 import 'package:get/get.dart';
 
 import '../controller/about_section_controller.dart';
+import '../controller/activities_section_controller.dart';
 import '../controller/apply_job_controller.dart';
 import '../controller/course_review_controller.dart';
 import '../controller/events_controller.dart';
@@ -45,6 +47,7 @@ class GetBinding implements Bindings {
     Get.lazyPut<ProductsController>(() => ProductsController());
     Get.lazyPut<JobsController>(() => JobsController());
     Get.lazyPut<DonationsController>(() => DonationsController());
+    Get.lazyPut<AllTestimonialsController>(() => AllTestimonialsController());
     Get.lazyPut<CourseReviewController>(() => CourseReviewController());
     Get.lazyPut<ApplyJobController>(() => ApplyJobController());
     Get.lazyPut<NotificationsController>(() => NotificationsController());
@@ -55,6 +58,7 @@ class GetBinding implements Bindings {
     Get.lazyPut<WhoWeAreController>(() => WhoWeAreController());
     Get.lazyPut<WhyChooseUsController>(() => WhyChooseUsController());
     Get.lazyPut<SolutionsSectionController>(() => SolutionsSectionController());
+    Get.lazyPut<ActivitiesSectionController>(() => ActivitiesSectionController());
     Get.lazyPut<PrivacyController>(() => PrivacyController());
   }
 }

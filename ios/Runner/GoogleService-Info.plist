@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>282662021746-379fq96ne13nd8nhnb8k84l0bg7u33hl.apps.googleusercontent.com</string>
+	<string>643494025068-1cnsd30g7nqpje505ak899rbbc06qt69.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.282662021746-379fq96ne13nd8nhnb8k84l0bg7u33hl</string>
+	<string>com.googleusercontent.apps.643494025068-1cnsd30g7nqpje505ak899rbbc06qt69</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>282662021746-jioihnlkvae5s53kma0fldr7t7aq92lh.apps.googleusercontent.com</string>
+	<string>643494025068-bqrr26bfcvrgvhpmpnto8t4gpedfe5ej.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBR837RdzQyZwf0nS5cRGnjX3oTtSyFPXM</string>
+	<string>AIzaSyDWfCdMzK7-2VQ1BhtfifAeoYm9HSX3Tnw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>282662021746</string>
+	<string>643494025068</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.gridsapps.cmsApp</string>
+	<string>com.gridsApps.beautyProvider</string>
 	<key>PROJECT_ID</key>
-	<string>laravada-4c495</string>
+	<string>beauty-sallon-booking</string>
 	<key>STORAGE_BUCKET</key>
-	<string>laravada-4c495.appspot.com</string>
+	<string>beauty-sallon-booking.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:282662021746:ios:c503e4a601ef9e2bf830eb</string>
+	<string>1:643494025068:ios:907abb07052a6d7d83c549</string>
 </dict>
 </plist>

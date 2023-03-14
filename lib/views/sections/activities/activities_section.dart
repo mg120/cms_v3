@@ -1,3 +1,4 @@
+import 'package:cms_app/controller/activities_section_controller.dart';
 import 'package:cms_app/helper/appTheme.dart';
 import 'package:cms_app/widgets/appCachedImage.dart';
 import 'package:cms_app/widgets/app_text.dart';
@@ -11,27 +12,26 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 import '../../../controller/about_section_controller.dart';
 import '../../home/tabs/home/widgets/header_title_widget.dart';
 
-class AboutSection extends StatelessWidget {
-  const AboutSection({Key? key}) : super(key: key);
+class ActivitiesSection extends StatelessWidget {
+  const ActivitiesSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: GetBuilder<AboutSectionController>(
-        builder:(controller)=> controller.isLoading? const LoadingWidget(): controller.aboutSectionList.isNotEmpty?SingleChildScrollView(
+      child: GetBuilder<ActivitiesSectionController>(
+        builder:(controller)=> controller.isLoading? const LoadingWidget(): controller.activitiesSectionList.isNotEmpty?SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
               // HeaderTitleWidget(title: "about".tr,),
-              Center(child: AppCachedImage(imageUrl: controller.aboutSectionList[8].value??"", width: 260, height: 220, fit: BoxFit.contain,)),
+              Center(child: AppCachedImage(imageUrl: controller.activitiesImage?.value??"", width: 260, height: 220, fit: BoxFit.contain,)),
               const SizedBox(height: 10,),
-              Center(child: AppText(controller.aboutSectionList[0].value??"", fontSize: 17, color: AppTheme.primaryColor,)),
+              Center(child: AppText(controller.activitiesTitle?.value??"", fontSize: 17, color: AppTheme.primaryColor,)),
               const SizedBox(height: 8),
-              AppText(controller.aboutSectionList[1].value??"", color: Colors.black54, maxLines: 100,),
               AppText("description".tr, underLine: true, fontSize: 16,),
-              AppText(controller.aboutSectionList[2].value??"", color: Colors.black54, maxLines: 100,),
+              AppText(controller.activitiesDescription?.value??"", color: Colors.black54, maxLines: 100,),
               const SizedBox(height: 28),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
